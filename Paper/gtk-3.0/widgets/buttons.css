@@ -71,14 +71,14 @@ GtkCalendar.button:backdrop:hover,
 
 
 
-.button *:focus,
+/*.button *:focus,
 *.button:focus {
     outline-color: alpha(#000, 0.2);
     outline-style: dashed;
     outline-offset: -3px;
     outline-width: 1px;
     outline-radius: 2px;
-}
+}*/
 
 .button:focus,
 .button.default:focus,

@@ -16,7 +16,8 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color settings #5F7C8A;
+@define-color settings @material_grey;
+@define-color settings_dark @material_grey_dark;
 
 /**********
  * Header *
@@ -29,7 +30,7 @@ CcWindow .header-bar {
 
 CcWindow .titlebar:backdrop,
 CcWindow .header-bar:backdrop {
-    background-color: shade(@settings,0.9);
+    background-color: @settings_dark;
 }
 
 /* Switch */
@@ -76,8 +77,8 @@ CcWindow GtkIconView.view.cell {
 }
  
 CcWindow GtkIconView.view.cell:hover {
-    border: 1px solid @settings;
-    background-color: alpha(@settings,0.4);
+    border: 0px solid @settings;
+    background-color: alpha(@settings,0.2);
     color: @settings;
 }
  
@@ -138,4 +139,18 @@ CcWindow .button.list-row:active:selected:hover {
 CcWindow .button.list-row:hover:selected {
     background-color: alpha(@settings, 0.2);
     color: @settings;
+}
+
+/************
+ * Scrollbar *
+ ************/
+CcWindow .scrollbar.slider:hover {
+    background-color: @settings;
+    background-image: none;
+}
+
+CcWindow .scrollbar.slider:active.
+CcWindow .scrollbar.slider:prelight:active {
+    background-color: shade(@settings, 1.2);
+    background-image: none;
 }

@@ -16,7 +16,8 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color gedit #F34235;
+@define-color gedit @material_red;
+@define-color gedit_dark @material_red_dark;
 
 /**********
  * Header *
@@ -56,25 +57,17 @@ GeditWindow .header-bar GtkSwitch.slider:backdrop {
  * Notebook *
  ************/
 
-/* Active */
-GeditWindow .notebook tab.top:active,
-GeditWindow .dynamic-notebook tab.top:active {
-    box-shadow:inset 0 -3px 0 0 @gedit;
+GeditWindow .notebook.header {
+    background-color: @gedit;
 }
 
-GeditWindow .notebook tab.bottom:active,
-GeditWindow .dynamic-notebook tab.bottom:active {
-    box-shadow:inset 0 3px 0 0 @gedit;
+GeditWindow .notebook:backdrop,
+GeditWindow .notebook GtkViewport:backdrop {
+    background-color: @gedit_dark;
 }
 
-GeditWindow .notebook tab.left:active,
-GeditWindow .dynamic-notebook tab.left:active {
-    box-shadow:inset -3px 0 0 0 @gedit;
-}
-
-GeditWindow .notebook tab.right:active,
-GeditWindow .dynamic-notebook tab.right:active {
-    box-shadow:inset 3px 0 0 0 @gedit;
+GeditViewFrame .notebook tab .button:active {
+    background-color: @gedit_dark;
 }
 
 /************
@@ -169,4 +162,83 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
     border-top: none;
     background-color: @background;
     background-image: none;
+}
+
+/**************************************
+ * Added Stuff For Colour Consistency *
+ **************************************/
+
+/************
+ * Scrollbar *
+ ************/
+GeditWindow .scrollbar.slider:hover {
+    background-color: @gedit;
+    background-image: none;
+}
+
+GeditWindow .scrollbar.slider:active.
+GeditWindow .scrollbar.slider:prelight:active {
+    background-color: shade(@gedit, 1.2);
+    background-image: none;
+}
+
+/* Focus Button */
+GeditWindow .button:focus,
+GeditWindow .button.default:focus,
+GeditWindow .button:active:focus,
+GeditWindow .button.text-button:focus,
+GeditWindow .button.image-button:focus {
+    border: 0px solid @gedit;
+    background-color: @gedit;
+    background-image: linear-gradient(to bottom, 
+                                      @gedit,
+                                      @gedit
+                                      );
+    color: @header_text;
+}
+
+/* Hover Button */
+GeditWindow .button:hover,
+GeditWindow .button.default:hover,
+GeditWindow .button:active:hover,
+GeditWindow .button.text-button:hover,
+GeditWindow .button.image-button:hover {
+    border: 0px solid @gedit;
+    background-color: @gedit;
+    background-image: linear-gradient(to bottom, 
+                                      @gedit,
+                                      @gedit
+                                      );
+    color: @header_text;
+}
+
+/* Active (Pressed) Button */
+GeditWindow .button:active,
+GeditWindow .button.default:active,
+GeditWindow .button.text-button:active,
+GeditWindow .button.image-button:active {
+    border: 0px solid @gedit_dark;
+    background-color: @gedit_dark;
+    background-image: linear-gradient(to bottom, 
+                                      @gedit_dark,
+                                      @gedit_dark
+                                      );
+    color: @header_text;
+
+}
+
+GeditWindow .button:active GtkImage,
+GeditWindow .button:focus GtkImage,
+GeditWindow .button:hover GtkImage {
+    color: @header_text;
+}
+
+GeditWindow .text-button:active GtkLabel,
+GeditWindow .text-button:hover GtkLabel {
+    color: @header_text;
+}
+
+GeditWindow .button:active GtkLabel,
+GeditWindow .button:hover GtkLabel {
+    color: @header_text;
 }

@@ -16,9 +16,9 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color terminal #2D5364;
-@define-color terminal_background #002B36;
-@define-color terminal_text #839495;
+@define-color terminal @header;
+@define-color terminal_background @base;
+@define-color terminal_text @foreground;
 
 /**********
  * Header *
@@ -59,33 +59,29 @@ TerminalWindow .header-bar GtkSwitch.slider:backdrop {
  * Notebook *
  ************/
 
-TerminalNotebook {
-    box-shadow: inset 0 1px 0 0 @border;
-}
-
 /* Active */
 TerminalNotebook tab.top:active,
 TerminalWindow .notebook tab.top:active,
 TerminalWindow .dynamic-notebook tab.top:active {
-    box-shadow:inset 0 -3px 0 0 @terminal;
+    box-shadow:inset 0 -3px 0 0 @highlight_base;
 }
 
 TerminalNotebook tab.bottom:active,
 TerminalWindow .notebook tab.bottom:active,
 TerminalWindow .dynamic-notebook tab.bottom:active {
-    box-shadow:inset 0 3px 0 0 @terminal;
+    box-shadow:inset 0 3px 0 0 @highlight_base;
 }
 
 TerminalNotebook tab.left:active,
 TerminalWindow .notebook tab.left:active,
 TerminalWindow .dynamic-notebook tab.left:active {
-    box-shadow:inset -3px 0 0 0 @terminal;
+    box-shadow:inset -3px 0 0 0 @highlight_base;
 }
 
 TerminalNotebook tab.right:active,
 TerminalWindow .notebook tab.right:active,
 TerminalWindow .dynamic-notebook tab.right:active {
-    box-shadow:inset 3px 0 0 0 @terminal;
+    box-shadow:inset 3px 0 0 0 @highlight_base;
 }
 
 /**********

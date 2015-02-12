@@ -28,9 +28,9 @@ PanelWidget,
 PanelApplet,
 PanelToplevel {
     padding: 0;
-    background-color: @panel;
+    background-color: @header;
     background-image: none;
-    color: @panel_text;
+    color: @header_text;
 }
 
 PanelApplet {

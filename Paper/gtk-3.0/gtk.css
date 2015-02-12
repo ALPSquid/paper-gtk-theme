@@ -22,23 +22,50 @@
  **********/
 
 /* Base colors */
+/*@define-color base #fff;/* Base color */
+/*@define-color background #fff;/* Background color */
+/*@define-color foreground #555;/* Foreground color */
+/*@define-color border #D8D8D8;/* Borders color */
+/*@define-color separator alpha(#000, 0.2);/* Separator color */
+/*@define-color text @foreground;/* Text color */
+/*@define-color panel #576165;/* Panel color */
+/*@define-color header #636E73;/* Header color */
+/*@define-color backdrop_header #454D50; /* Header backdrop color */
+/*@define-color header_text #fff;/* Header text color */
+/*@define-color selection #9FB0B9;/* Selection color */
+/*@define-color view_background #ffffff;/* View background */
+/*@define-color inactive_frame @border;/* Inactive frame color */
+/*@define-color panel_text #dbdee0;/* Panel text color */
+/*@define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
+/*@define-color text_shadow alpha(white, 0.4);/* Text shadow */
+/*@define-color icon_shadow @text_shadow;/* Icon shadow */
+
 @define-color base #fff;/* Base color */
 @define-color background #fff;/* Background color */
-@define-color foreground #555;/* Foreground color */
+@define-color foreground #4e4e4e;/* Foreground color */
 @define-color border #D8D8D8;/* Borders color */
-@define-color separator alpha(#000, 0.2);/* Separator color */
+@define-color separator alpha(#000, 0.15);/* Separator color */
 @define-color text @foreground;/* Text color */
 @define-color panel #576165;/* Panel color */
-@define-color header #636E73;/* Header color */
-@define-color backdrop_header #454D50; /* Header backdrop color */
+@define-color header #2196f3;/* Header color */
+@define-color backdrop_header #1e88e5; /* Header backdrop color */
 @define-color header_text #fff;/* Header text color */
-@define-color selection #9FB0B9;/* Selection color */
+@define-color selection #2196f3;/* Selection color */
 @define-color view_background #ffffff;/* View background */
 @define-color inactive_frame @border;/* Inactive frame color */
 @define-color panel_text #dbdee0;/* Panel text color */
-@define-color panel_text_shadow alpha(#000, 0.2);/* Panel text color */
+@define-color panel_text_shadow alpha(#000, 0.15);/* Panel text color */
 @define-color text_shadow alpha(white, 0.4);/* Text shadow */
 @define-color icon_shadow @text_shadow;/* Icon shadow */
+@define-color highlight_base #ffeb3b;
+@define-color dark_header_text alpha(@header_text, 0.7);
+
+@define-color material_red #f44336;
+@define-color material_red_dark #e53935;
+@define-color material_grey #607d8b;
+@define-color material_grey_dark #546e7a;
+@define-color material_green #4caf50
+@define-color material_green_dark #43a047
 
 /* Hightlight & shadow colors */
 @define-color highlight alpha(#fff, 0.2);

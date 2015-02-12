@@ -16,7 +16,7 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@define-color nautilus #636E73;
+@define-color nautilus @header;
 
 /**********
  * Header *
@@ -50,7 +50,7 @@ NautilusWindow GtkSwitch.slider:active {
  ************/
 
 /* Active */
-NautilusWindow .notebook tab.top:active,
+/*NautilusWindow .notebook tab.top:active,
 NautilusWindow .dynamic-notebook tab.top:active {
     box-shadow:inset 0 -3px 0 0 @nautilus;
 }
@@ -68,7 +68,7 @@ NautilusWindow .dynamic-notebook tab.left:active {
 NautilusWindow .notebook tab.right:active,
 NautilusWindow .dynamic-notebook tab.right:active {
     box-shadow:inset 3px 0 0 0 @nautilus;
-}
+}*/
 
 /***********
  * Desktop *

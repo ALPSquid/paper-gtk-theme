@@ -59,10 +59,10 @@
     background-color: alpha(@backdrop_foreground, 0.2);
 }
 
-.scrollbar.slider.fine-tune:prelight:active {
+/*.scrollbar.slider.fine-tune:prelight:active {
       background-image: none;
       border: 3px solid transparent;
-}
+}*/
 
 
 /* Troughs */
@@ -77,25 +77,26 @@
 
 .scrollbar.trough:insensitive {
     background: none;
-    border: 3px solid transparent;
+    border: 0px solid transparent;
 }
 
 .scrollbars-junction:backdrop,
 .scrollbar.trough:backdrop {
     background-image: none;
-    background: none;
+    /*background: none;*/
     border-width: 0;
     border-radius: 0;
     border-image: none;
+    border: none;
 }
 
-.scrollbar.trough:insensitive:backdrop {
+/*.scrollbar.trough:insensitive:backdrop {
     background-image: none;
     background: none;
     border-width: 0;
     border-radius: 0;
     border-image: none;
-}
+}*/
 
 /**********************
  * Overlay Scrollbars *
